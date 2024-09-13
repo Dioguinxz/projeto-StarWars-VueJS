@@ -14,8 +14,8 @@
         <small>Olá, {{ userName }}</small>
 
         <form action="">
-            <input placeholder="Busca por nome...">
-            <button>Buscar</button>
+            <input placeholder="Busca por nome..." v-model="searchName"/>
+            <button type="button">Buscar</button>
         </form>
 
         <div class="characters">
