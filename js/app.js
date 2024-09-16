@@ -63,6 +63,7 @@ const App = new Vue({
         like(userName) {
             alert(`O personagem ${userName} recebeu um like!`)
         },
+        
 
         search() {
 
