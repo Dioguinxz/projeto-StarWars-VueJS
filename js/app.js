@@ -64,18 +64,27 @@ const App = new Vue({
             alert(`O personagem ${userName} recebeu um like!`)
         },
 
-        search(){
-            const list = this.characters 
-            
+        search() {
+
+            if(this.search === '') {
+                return alert('O campo de busca é obrigatório')
+            }
+
+
+            const list = this.characters = LIST
+
             const result = list.filter(item => {
-            return item.nome === this.searchName
+                return item.nome === this.searchName
             })
 
-            console.log(this.searchName)
-            console.log(result)
+            if (result.length <= 0) {
+                alert('Nenhum personagem encontrado.')
+            } else {
+                this.characters = result
+            }
 
-            this.characters = result
+
         }
-        
+
     }
 })
